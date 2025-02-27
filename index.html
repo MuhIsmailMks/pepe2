@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta charset="utf-8" />
+
+    <title>EasyDispatch</title>
+
+    <meta name="description" content="" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- css start -->
+	<link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/input.css" />
+	<!-- css end -->
+
+	<!-- icon web url -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon.png"
+    />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- Leaflet Routing Machine CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
+    />
+
+ 
+  </head>
+
+  <body class="main-page">
+ 
+	<nav>
+		<div class="nav-content w-full lg:w-[75%] max-w-[1300px] flex justify-between items-center max-lg:px-6 flex-wrap max-md:gap-3  ">
+
+			<h3 class="text-[25px] max-lg:text-white">
+				
+				<span class="lg:hidden text-[30px]"> < </span>
+				<span class="hidden lg:block">Load details</span>
+
+			</h3>
+
+			<p class="lg:hidden center_position absolute text-white text-[18px]">Load#15B1664</p>
+
+			<div class="accessibility flex items-center gap-4  ">
+
+				<button id="shareBtn" class="share-btn flex gap-3 items-center justify-center ">
+					<img src="./assets/images/share.svg" alt="share" class="h-[30px] md:h-[24px] w-auto">
+					<p class="max-md:text-[14px] text-[16px] max-lg:hidden">Share</p>
+				</button>
+
+				<a href="./login.html" class="cursor-pointer max-lg:hidden">
+					<button class="login-btn-nav max-md:text-[14px] text-[16px] ">Log in to act on this load</button>
+				</a>
+
+			</div>
+
+		</div>
+	</nav>
+
+    <div class="container_site w-full lg:w-[77%] max-w-[1300px] h-auto flex flex-col items-center lg:py-10  ">
+
+		<div class="max-w-[100%] h-[350px] lg:h-[500px] w-full z-[88] relative">
+			<div class="w-full h-full relative z-10">
+				<div id="map" class="w-full h-full"></div>
+			</div>
+			<div class="bg-map absolute z-20 w-full h-[30px] bg-white"></div>
+			<div class="map-icon absolute z-20 w-[30px] h-[30px]    ">
+				<img src="./assets/images/map.svg" alt="" class="w-[60%] h-auto">
+			</div>
+		</div>
+
+		<div class="bar-container fixed flex justify-between items-center bg-white w-full h-[85px] lg:hidden z-[999] bottom-0 px-4">
+			<button class="bar-mobile-btn btn1"><img src="./assets/images/MaterialSymbolsCallOutlineRounded.svg" alt="call phone" class="w-[20px]"></button>
+			<button class="bar-mobile-btn btn2">Bid</button>
+			<button class="bar-mobile-btn btn2">Book</button>
+		</div>
+
+		<div class="content_container w-full h-auto relative lg:px-4">
+			
+			<div class="details-container w-full lg:w-[60%]">
+				
+				<div class="content-box details-mobile">
+					
+					<h4 class="title-content font-semibold">Details</h4>
+
+					<div class="container-data">
+						<div class="container-data-inner">
+							<div class="data id">
+								<p>Distance</p>
+								<p>305 mi</p>
+							</div> 
+							<div class="data price">
+								<p>Price</p>
+								<p>$1,550</p>
+							</div>
+							<div class="data number">
+								<p>Number of stops</p>
+								<p>2</p>
+							</div>
+						</div>
+					
+						<div class="container-data-inner">
+							<div class="data deadhead">
+								<p>Deadhead</p>
+								<p>N/A</p>
+							</div>
+							<div class="data rate">
+								<p>Rate per mile</p>
+								<p>$5.08 / mi</p>
+							</div>
+							<div class="data transfix">
+								<p>Transfix id</p>
+								<p>1581664</p>
+							</div>
+						</div>
+					</div>
+					
+				</div> 
+			 
+				<div class="content-box equipment">
+					
+					<h4 class="title-content">Equipment</h4>
+
+					<div class="data">
+						<p>Trailer</p>
+						<p>Dry Van</p>
+					</div>
+					<div class="data">
+						<p>Length</p>
+						<p>53 ft</p>
+					</div>
+					<div class="data">
+						<p>Requirements</p>
+						<p>-</p>
+					</div> 
+
+				</div>
+
+				<div class="content-box commodities">
+					
+					<h4 class="title-content">Commodities</h4>
+
+					<div class="data">
+						<p>Weight</p>
+						<p>35,000 lbs</p>
+					</div>
+					<div class="data">
+						<p>Commodity</p>
+						<p>-</p>
+					</div>
+					<div class="data">
+						<p>Packaging</p>
+						<p>-</p>
+					</div> 
+
+				</div>
+				
+				<div class="content-box commodities">
+					 
+					<div class="data">
+						<p class="text-black">Broker</p>
+						<a href="#" class="text-[12px] broker-link">
+							 <p>View all broker info</p>
+							<img src="./assets/images/out_Icon.svg" alt="out icon" class="h-[10px]">
+						</a>
+					</div>
+					<div class="data">
+						<p>Company</p>
+						 <img src="./assets/images/tradent.avif" alt="tradent" class="h-[25px] w-auto">
+					</div>
+					<div class="data">
+						<p>Factoring eligibility</p>
+						<h5 class="factoring text-[12px]">Not Factorable</h5>
+					</div>
+					<div class="data">
+						<p>Email</p>
+						<p class="text-black text-[20px] max-w-[70%] text-ellipsis overflow-hidden">loads+trucksmarter@tridenttransport.mail.parade.ai</p>
+					</div> 
+					<div class="data">
+						<p>Phone</p>
+						<p class="text-black text-[20px]">+1 (727) 300-4032</p>
+					</div>
+					<div class="data">
+						<p>MC</p>
+						<p class="text-black text-[20px]">848750</p>
+					</div>
+					<div class="data">
+						<p>DOT</p>
+						<p>-</p>
+					</div>
+					<div class="data">
+						<p>Days to Pay - Last 60</p>
+						<p>-</p>
+					</div>
+					<div class="data">
+						<p class="">Days to Pay - All time</p>
+						<a href="#" class="text-[14px] underline">
+							 <p>Open in directory</p>
+							<img src="./assets/images/out_Icon.svg" alt="out icon" class="h-[14px]">
+						</a>
+					</div>
+					<div class="data">
+						<p class="">Payment method</p>
+						<a href="#" class="text-[14px] underline">
+							 <p>Open in directory</p>
+							<img src="./assets/images/out_Icon.svg" alt="out icon" class="h-[14px]">
+						</a>
+					</div>
+					<div class="data">
+						<p class="">Website</p>
+						<a href="#" class="text-[18px] underline font-semibold">
+							 <p>tridenttransport.com/</p> 
+						</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="price-container w-full lg:w-[38%]">
+
+				<div class="content-box hidden-box-in-mobile">
+					
+					<div class="price w-full flex justify-between">
+						<p>Price</p>
+						<p>Broker</p>
+					</div>
+
+					<div class="data">
+						<p class="text-black text-[27px]">$ -</p>
+						 
+						 <div class="image h-[40px] w-auto">
+							<img src="./assets/images/tradent.avif" alt="" class="h-full">
+						 </div>
+					</div>
+
+					<div class="line"></div>
+
+					<div class="data">
+						<p class="text-[14px]">Phone number</p>
+						<p>+1 (727) 300-4032</p>
+					</div>
+
+					<button class="login-btn">
+						Log in to act on this load
+					</button>
+					
+				</div>
+
+				<div class="content-box mobile-box text-[13px]  ">
+					<h4 class="text-black text-[20px]">$1,550</h4> 
+					<p>$5.08 / mi</p>
+					<p class="text-[13px]">
+						<span>⏱︎  Posted</span> 
+						<span class="text-black">12 hrs ago</span>
+					</p>
+				</div>
+
+				<div class="content-box path-map bg-black">
+					<h4 class="title-content hidden-box-in-mobile">Stops</h4>
+
+					<div class="path-container flex w-full gap-2">
+						
+						<div class="path">
+							<div class="start-point rounded-full"></div>
+							<div class="line-path"></div>
+							<div class="end-point"></div>
+						</div>
+
+					    <div class="path-information flex flex-col gap-2 lg:gap-4">
+
+							<div class="about-path w-full">
+								<div class="point">
+									<div class="title ">
+										<h4 class="from" id="startCity">Pearland, TX</h4>
+										<p class="text-[10px] text-gray-400  ">19 mi deadhead</p>
+									</div>
+									<div class="address" >
+										<p>Address</p>
+										<h5 id="startAddress">Pearland, TX 77581</h5>
+									</div>
+									<div class="time" >
+										<p class="text-[10px]">Oct 23, 09:30 PDT ★ 4.2</p> 
+									</div>
+									<div class="live">
+										<p>Live pickup</p>
+										<h5>Feb 26 · 14:15 CST</h5>
+									</div>
+									<div class="notes  ">
+										<p>Notes</p>
+										<h5>Verify to view details</h5>
+									</div>
+								</div>
+							</div>
+	
+							<div class="about-path">
+								<div class="point">
+									<div class="title ">
+										<h4 class="to" id="endCity">
+											Edmonton, AB</h4>
+											<p class="text-[10px] text-gray-400  ">676 mi loaded</p>
+									</div>
+									
+									<div class="address">
+										<p>Address</p>
+										<h5 id="endAddress">Edmonton, AB T6A 0L2</h5>
+									</div>
+									<div class="time" >
+										<p class="text-[10px]">Oct 24, 17:00 MDT</p> 
+									</div>
+									<div class="live">
+										<p>Live pickup</p>
+										<h5>Mar 3 · 08:00 MST - 12:00 MST</h5>
+									</div>
+									<div class="notes ">
+										<p>Notes</p>
+										<h5>Verify to view details</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="line"></div>
+							
+							<p class="text-[10px] flex gap-2"><span class="text-black flex"><img src="./assets/images/van.svg" alt="" class="h-[10px] w-auto mr-1"> Dry van</span> 43.1k lbs • 1 reload</p>
+							
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+ 
+	
+    <script src="./assets/js/index.js"></script>
+ 
+  </body>
+
+</html>

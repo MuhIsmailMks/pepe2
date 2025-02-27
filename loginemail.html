@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    	<!-- css start -->
+	<link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/input.css" />
+	<!-- css end -->
+    <title>EasyDispatch login</title>
+</head>
+<body>
+
+    <div class="login-container w-full lg:h-screen relative flex min-h-screen">
+
+        <div class="left-login-form flex_col_center gap-10 px-4 py-5 h-full overflow-y-scroll pt-[80px] lg:pt-[150px]">
+
+            <h1 class="title text-center text-[30px]  lg:text-[50px] font-bold brush-text">EasyDispatch</h1>
+
+            <p class="text-[20px]">Log in to your account</p>
+
+            <form action="email" class="w-[90%] md:w-[400px] flex_col_center gap-4">
+                <label for="emailorphone" class="text-[13px]">Email</label>
+                <input type="text" placeholder="Email" required class="px-4  text-[13px]">
+                <label for="emailorphone" class="text-[13px]">Password</label>
+                <input type="password" placeholder="Password" required class="px-4  text-[13px]">
+                <button class="submit w-full bg-black p-3 text-white rounded-md cursor-pointer" type="submit">Continue</button>
+            </form>
+
+            <div class="flex_col_center gap-4">
+                <p class="text-[15px]">New to TruckSmarter? <a href="./create.html" class="underline">Sign up</a></p>
+            
+                <a href="#" class="underline text-[15px]">Forgot password?</a>
+    
+                <a href="#" class="underline text-[13px]">Other authentication options</a>
+            </div>
+
+            <div class="flex justify-center items-center gap-4 text-[14px] text-gray-700">
+                <a href="">© EasyDispatch </a>
+                <p>•</p>
+                <a href="">Contact</a>
+                <p>•</p>
+                <a href="">Privacy & Terms</a>
+            </div>
+
+        </div>
+
+        <div class="right-image w-[40%] flex flex-col items-center justify-start gap-5 text-center px-10 bg-[#1C1F24] min-h-screen text-white absolute right-0   pt-[50px] h-full overflow-y-scroll">
+
+            <h2 class="text-[40px] uppercase font-bold oswald-text">Combine your load boards</h2>
+
+            <p class="text-[15px]">Find the best truck loads fast and book them first with all your loads in one place.</p>
+
+            <img src="./assets/images/emailPage.webp" alt="emailPage image" class="w-[82%] h-auto relative right-[-15%] z-10">
+
+            <div class="bg_blur absolute bottom-[13%] left-[20%] blur-[50px]"></div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

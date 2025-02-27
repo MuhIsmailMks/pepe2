@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    	<!-- css start -->
+	<link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/input.css" />
+	<!-- css end -->
+    <title>EasyDispatch create account</title>
+</head>
+<body>
+
+    <div class="create-account-container w-full h-auto relative flex   min-h-screen">
+
+        <div class="left-login-form  flex_col_center gap-10 px-4 py-5">
+
+            <h1 class="title text-center text-[30px]  lg:text-[50px] font-bold brush-text">EasyDispatch</h1>
+
+            <p class="text-[20px]">Create your free account</p>
+
+            <div class="flex_col_center gap-6 w-full">
+                <button id="google-account" class="choose-account-btn">
+                    <img src="./assets/images/LogosGoogleIcon.svg" alt="google" class="h-6 w-auto">
+                    Continue with Google
+                </button>
+    
+                <button id="apple-account" class="choose-account-btn">
+                    <i class="fa-brands fa-apple"></i>  
+                    Continue with Apple
+                </button>
+     
+            </div>
+
+            <p class="text-[13px] text-gray-400">Or use a one time code
+            </p>
+
+            <form action="email" class="w-[90%] md:w-[400px] flex_col_center gap-4">
+                <label for="emailorphone" class="text-[13px]">Email or phone number *</label>
+                <input type="text" placeholder="Enter your email or phone number" required class="px-4  text-[13px]">
+                <div id="agree" class="agree flex gap-5 w-full">
+                    
+                    <div class="tick w-[18px] h-[18px] aspect-square border-black border-2 cursor-pointer flex justify-center items-center">
+                        <img src="./assets/images/CharmTick.svg" alt="tick" class="w-4 h-auto">
+                    </div>
+
+                    <p class="text-[14px] text-gray-500">
+                        I acknowledge EasyDispatch Privacy Policy and agree to the Terms of Service, including the arbitration provision linked here. By providing my phone number above, I consent to receive calls and SMS from TruckSmarter for feedback collection and marketing purposes (including through the use of an autodialer and prerecorded and artificial voice) and consent to the recording of such call for quality assurance purposes. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Text STOP to cancel or HELP for help.</p>
+                </div>
+                <button class="submit w-full bg-yellow-300 p-3 text-black rounded-md cursor-pointer" type="submit">Continue</button>
+            </form>
+
+            <p class="text-[15px]">Already have an account?  <a href="./login.html" class="underline">Log in</a></p>
+
+            <div class="flex justify-center items-center gap-4 text-[14px] text-gray-700">
+                <a href="">© EasyDispatch </a>
+                <p>•</p>
+                <a href="">Contact</a>
+                <p>•</p>
+                <a href="">Privacy & Terms</a>
+            </div>
+
+        </div>
+
+        <div class="right-image w-[40%] flex_col_center gap-5 text-center px-10 bg-[#1C1F24] h-full min-h-screen text-white absolute right-0 ">
+
+            <h2 class="text-[40px] uppercase font-bold oswald-text">Work with trusted brokers</h2>
+
+            <p class="text-[20px]">Every broker we partner with goes through a credit check, so you're always working with trustworthy partners.</p>
+
+            <img src="./assets/images/create.webp" alt=" broker image" class="w-[90%] h-auto">
+
+        </div>
+
+    </div>
+
+    <script>
+        // agree
+        const tick = document.querySelector('.tick')
+        document.getElementById('agree').addEventListener('click', () => {
+        tick.classList.toggle('active')
+        })
+    </script>
+    
+</body>
+</html>
