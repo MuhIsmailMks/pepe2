@@ -2,12 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --font-mont: "Montserrat", sans-serif;
-  --font-rock: "RocknRoll One", sans-serif;
-}
+} 
 
 html {
   scroll-behavior: smooth;
