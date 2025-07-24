@@ -154,90 +154,70 @@ section{
   }
 }
 
-.water {
-  animation: water 8s ease-in-out infinite;
-  -webkit-animation: water 8s ease-in-out infinite;
+.rotating_btn {
+  animation: button_animation 1s infinite alternate ease-in-out; 
 }
 
-@keyframes water {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-10%);
-    -webkit-transform: translatey(-10%);
-    -moz-transform: translatey(-10%);
-    -ms-transform: translatey(-10%);
-    -o-transform: translatey(-10%);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
-.rotate_animation {
-  animation: rotate 10s linear infinite;
-}
-
-@keyframes rotate {
+@keyframes button_animation {
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
+    transform: rotate(10deg);
   }
 }
+ 
 
-.cloud_animation {
-  animation: cloud 35s ease-in-out infinite;
+.paper_animation {
+  animation: paper_animation 12s ease-in-out infinite; 
 }
 
-.cloud_animation_reverse {
-  animation: cloud_reverse 35s ease-in-out infinite;
-}
-
-@keyframes cloud {
-  0%,
-  100% {
-    transform: translateX(0px);
+@keyframes paper_animation {
+  0% {
+    transform: rotate(-10deg);
   }
   50% {
-    transform: translateX(-100px);
-  }
+    transform: rotate(5deg); 
 }
-
-@keyframes cloud_reverse {
-  0%,
   100% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(100px);
+    transform: rotate(-10deg);
   }
 }
 
-.token_animation {
+.tokenImg_animation {
+  animation: tokenImg 13s ease-in-out infinite;
+}
+
+@keyframes tokenImg {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(3deg); }
+  20%  { transform: rotate(5deg); }
+  30%  { transform: rotate(3deg); }
+  40%  { transform: rotate(0deg); }
+  50%  { transform: rotate(-3deg); }
+  60%  { transform: rotate(-5deg); }
+  70%  { transform: rotate(-3deg); }
+  80%  { transform: rotate(0deg); }
+  90%  { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+ 
+.bullet_animation {
   transform-origin: 50% 0px;
-  animation: token_animation 3s infinite cubic-bezier(0.5, 300, 0.5, -300);
+  animation: bullet_animation 3s infinite  ease-in;
 }
 
-@keyframes token_animation {
-  100% {
-    transform: rotate(0.05deg);
-    -webkit-transform: rotate(0.05deg);
-    -moz-transform: rotate(0.05deg);
-    -ms-transform: rotate(0.05deg);
-    -o-transform: rotate(0.05deg);
-  }
+@keyframes bullet_animation {
+  0%   { opacity: 0.7; }
+  25%  { opacity: 1; }
+  50%  { opacity: 0.6; }
+  75%  { opacity: 1; }
+  100% { opacity: 0.8; }
 }
 
 .zoom_in {
-  animation: zoom_in 10s infinite linear;
-  -webkit-animation: zoom_in 10s infinite linear;
+  animation: zoom_in 20s infinite linear; 
 }
 
 @keyframes zoom_in {
@@ -250,43 +230,35 @@ section{
     -o-transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+    transform: scale(1.1); 
   }
 }
 
-.doogle_animation {
-  animation: doogle_animation 10s linear infinite;
-  -webkit-animation: doogle_animation 10s linear infinite;
+.smokeFall {
+  animation: smokeFall 2s infinite ease-in-out;
 }
 
-@keyframes doogle_animation {
-  0%,
+@keyframes smokeFall {
+  0% {
+    transform: translateY(-200px) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(0px) rotate(180deg) scale(1);
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.4;
+  }
   100% {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-  }
-  30% {
-    transform: translateX(10%);
-    -webkit-transform: translateX(10%);
-    -moz-transform: translateX(10%);
-    -ms-transform: translateX(10%);
-    -o-transform: translateX(10%);
-  }
-  60% {
-    transform: translateX(-10%);
-    -webkit-transform: translateX(-10%);
-    -moz-transform: translateX(-10%);
-    -ms-transform: translateX(-10%);
-    -o-transform: translateX(-10%);
+    transform: translateY(200px) rotate(360deg) scale(1.2);
+    opacity: 0;
   }
 }
+
 
 /* media queries */
 @media screen and (min-width: 1025px) {
