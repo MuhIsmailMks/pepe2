@@ -1,362 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <head>
-    <meta charset="utf-8" />
 
-    <title>EasyDispatch</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+    
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <meta name="description" content="" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Patua+One&display=swap" rel="stylesheet">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>PEPE2</title>
+</head>
 
-	<!-- css start -->
-	<link rel="stylesheet" href="./src/output.css" />
-    <link rel="stylesheet" href="./src/input.css" />
-	<!-- css end -->
+<body>
 
-	<!-- icon web url -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon.png"
-    />
+    <div class="container_site max-w-[100%] relative w-full h-auto min-h-[100vh] overflow-hidden bg-[#00E0FF]">
+        
+        <!-- bg top -->
+         <div class="bg absolute left-[-5%] top-[-10vw] w-[110vw] z-[99]">
+            <img src="./assets/image/bgNav.png" alt="leaf" class="w-full">
+         </div>
 
-    <!-- Leaflet CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
+        <!-- navbar -->
+        <nav
+            class="w-full z-[999] justify-center h-[100px] xl:h-[120px] absolute left-0 top-0 max-w-[100%] flex items-center px-[1rem] xl:px-[2rem] ">
 
-    <!-- Leaflet Routing Machine CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
-    />
+            <div class="nav_container px-[1rem] md:px-[2rem] flex items-center relative h-[70%] justify-between w-full max-w-[100%] xl:max-w-[1500px] nav_shadow rounded-lg md:rounded-[30px] max-lg:px-6">
+
+                <div class="left flex relative z-10 justify-center items-center text_nav text-[15px] md:text-[30px]"  >
+
+                    <div class="logo flex_center gap-2 md:gap-4">
+                        <span class="w-[40px] md:w-[60px] h-[40px] md:h-[60px] rounded-full border-black border-[2px] flex_center overflow-hidden">
+                            <img src="./assets/image/logo.png" alt="logo" class="w-[130px] h-auto object-cover">
+                        </span>
+                         <img src="./assets/image/pepeText.png" alt="logo" class="w-[70px] md:w-[100px] lg:w-[130px] h-auto object-cover">
+                    </div>  
+                   
+                </div>
+
+                <div class="center absolute left-[50%] translate-x-[-50%]  top-0 h-full w-[100%] z-0  justify-center flex items-center "
+                 >
+
+                    <ul class="flex items-center absolute opacity-0 xl:opacity-100 xl:relative gap-[1rem] link_none">
+                        
+                        <li class="list-none">
+                            <a href="#Home"
+                                class="text_nav text-[18px]">
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li class="list-none">
+                            <a href="#About"
+                                class="text_nav text-[18px]">
+                                About
+                            </a>
+                        </li>
+                        
+                        <li class="list-none">
+                            <a href="#Tokonomics"
+                                class="text_nav text-[18px]">
+                                Tokonomics
+                            </a>
+                        </li>
+ 
+
+                    </ul>
+
+                </div>
+
+                <div class="right relative z-10 md:w-auto flex justify-center h-full items-center gap-[1rem] "  >
+ 
+                    <a href="#"
+                        class="w-[70px] h-[33px] md:w-[145px] uppercase md:h-[53px]   bg-[#FFC200] rounded-[10px] md:rounded-[10px] text-[10px] xl:text-[18px] flex justify-center items-center btn_hover border-[#000] border-[1px]  duration-300 box_shdow">
+                        Buy Now
+                    </a>
+
+                    <div class="menu-button relative">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+
+                  
+                </div>
+
+            </div>
+
+            <!-- menu -->
+            <div class="menu menu_drop nav_shadow absolute hidden top-[110%] right-[3rem] w-[190px] flex justify-center border-black border-[2px] rounded-[12px] bg-[#33E4FF] h-auto py-4">
+            
+                <ul class="flex items-center  relative gap-[2rem] link_none flex-col justify-center">
+
+                    <li class="list-none"><a href="#about"
+                            class="text_nav text-[19px] md:text-[30px]">About</a>
+                    </li>
+                    <li class="list-none"><a href="#Howtobuy"
+                            class="text_nav text-[19px] md:text-[30px]">How to buy</a>
+                    </li>
+                    <li class="list-none"><a href="#tokenomics"
+                            class="text_nav text-[19px] md:text-[30px]">Tokenomics</a>
+                    </li>
+                    <li class="list-none"><a href="#faq"
+                            class="text_nav text-[19px] md:text-[30px]">Faq</a>
+                    </li> 
+                            
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- hero -->
+         <section id="Home" class="max-sm:h-[400px] max-lg:h-[600px]">
+
+            <div class="bg-smoke w-full h-auto max-lg:bottom-0 absolute md:relative">
+                <img src="./assets/image/bg-smoke.png" alt="smoke bg" class="w-full h-auto">
+            </div>
+
+            <div class="bg-hero absolute w-full bottom-0 z-[9] flex_center">
+                <img src="./assets/image/bg-hero.png" alt="hero image" class="w-full h-auto">
+
+                <img src="./assets/image/pepeText.png" alt="" class="absolute left-[22%] top-0 w-[45%] ">
+            </div>
+
+            <div class="bg-triangle absolute w-full top-[54%] lg:top-[31%] z-10">
+                <img src="./assets/image/triangle.svg" alt="triangle image" class="w-[18%] h-auto right-[-5%] absolute">
+                <img src="./assets/image/triangle.svg" alt="triangle image" class="w-[18%] h-auto left-[-10%] absolute mirror_image">
+            </div>
+
+            <div class="papertext w-[50%] lg:w-[30%] absolute z-[5] right-[5%] lg:right-[10%] rounded-[5%] bottom-[15%] lg:bottom-[28%] flex justify-center p-[2vw] rotate-[-10deg]">
+                
+                <p class="text-[10.5px] md:text-[16px] lg:text-[1.2vw] text-black text-center absolute w-full py-[20px] px-[15%] lg:p-[4vw] z-10 patua_one">
+                    PEPEv2 is not just a meme — it’s a movement. Born from the legendary internet frog, this next-gen version brings humor, community, and crypto utility into one vibrant ecosystem.
+                </p>
+
+                <img src="./assets/image/bg-paper.svg" alt="paper" class="w-full h-full relative">
+                
+                
+            </div>
+
+         </section>
+
+         <!-- about -->
+          <section id="About" class="h-[600px] min-[450px]:h-[800px] lg:h-[55vw] bg-[#4C9528] z-10">
+              
+            <div class="bg-decor absolute w-full h-auto top-[-10vw] lg:top-[-12%]">
+                <img src="./assets/image/decor_hero_bottom.png" alt="bg decor" class="w-full">
+            </div>
+
+            <div class="title absolute top-[5%] lg:top-[10%] left-[50%] max-lg:translate-x-[-50%] lg:left-[5%] w-[60%] min-[450px]:w-[30%]">
+                <img src="./assets/image/about-text.png" alt="about text" class="w-full">
+            </div>
+
+            <div class="content absolute z-0 left-[50%] max-lg:translate-x-[-50%] lg:left-[43%] top-[30%] min-[450px]:top-[20%] lg:top-[10%] w-[70%] min-[450px]:w-[50%] lg:w-[42%]">
+
+                 <div class="text w-full h-auto flex_center">
+                    <img src="./assets/image/bg-content-about.svg" alt="bg about text" class="w-full">
+
+                    <p class="absolute w-[60%] text-[2.4vw] min-[450px]:text-[1.5vw] lg:text-[1.6vw] text-center patua_one mr-[4vw]">
+                        PEPEv2 is the rebirth of the internet’s most iconic frog — leveled up for the next generation of degens. It’s not just a meme; it’s a community-powered revolution blending humor, culture, and blockchain vibes
+                    </p>
+                 </div>
+
+            </div>
+            
+            <div class="social left-[50%] max-lg:translate-x-[-50%] lg:left-[35%] bottom-[28%] sm:bottom-[40%] lg:bottom-[28%] w-full md:w-[60%] lg:w-[50%] flex_center absolute z-30 gap-4 lg:gap-[2vw]">
+                <a href="#twitter" class="social_btn bg-[#FFFFFF] rounded-[20%] w-[15%] max-lg:max-w-[50px] lg:w-[10%] aspect-square border-black border-2 box_shdow flex_center duration-150 hover:scale-110">
+                    <img src="./assets/image/twitter.svg" alt="twitter" class="w-[50%]">
+                </a>
+                <a href="#telegram" class="social_btn bg-[#FFFFFF] rounded-[20%] w-[15%] max-lg:max-w-[50px] lg:w-[10%] aspect-square border-black border-2 box_shdow flex_center duration-150 hover:scale-110">
+                    <img src="./assets/image/telegram.svg" alt="telegram" class="w-[50%]">
+                </a>
+                <a href="#solana" class="social_btn bg-[#FFFFFF] rounded-[20%] w-[15%] max-lg:max-w-[50px] lg:w-[10%] aspect-square border-black border-2 box_shdow flex_center duration-150 hover:scale-110">
+                    <img src="./assets/image/solana.png" alt="solana" class="w-[50%]">
+                </a>
+            </div>
+
+            <div class="image absolute left-0 bottom-0 w-full h-full z-10">
+
+                <div class="image1 absolute w-[75%] lg:w-[65%] bottom-[1%] left-[-19%] z-10">
+                    <img src="./assets/image/about-image1.png" alt="about image1" class="w-full h-auto">
+
+                    <img src="./assets/image/bullet.png" alt="bullet" class="w-[10%] absolute right-[-5%] top-[18%]">
+                </div>
+                
+
+                <img src="./assets/image/about-image2.png" alt="bg about" class="w-[34%] absolute right-[-5%] bottom-0 z-10 rotate-[-10deg]">
+                
+                <img src="./assets/image/bg-bottom-about.png" alt="bg about" class="w-full absolute bottom-0 ">
+
+                <img src="./assets/image/bg-bottom-about2.png" alt="bg about" class="w-full absolute bottom-0 z-20 ">
+            </div>
+
+          </section>
+
+          <!-- tokenomics -->
+         <section id="Tokenomics" class="bg-[#4C9528] py-[5vw] z-30 flex_center flex-col">
+
+                <div class="bg-line absolute w-full h-auto top-[-5vw] lg:top-[-5%]">
+                    <img src="./assets/image/token-lines.svg" alt="token line" class="w-full">
+                </div>
+
+                <div class="content w-[80%] flex_center gap-4 lg:gap-[5%] relative max-lg:flex-col">
+                    <div class="chart aspect-square w-[70%] lg:w-[40%] rounded-full bg-[#83D15C] flex_center relative">
+                         <img src="./assets/image/chart.png" alt="chart" class="w-full h-auto"> 
+                    </div>
+                    <div class="about-token text-[#FFF7DD] w-[90%] lg:w-[55%] max-lg:text-center">
+
+                        <h3 class="text-shdow text-[10vw] md:text-[7vw]">Tokenomics</h3>
+                         
+                        <div class="text-[5vw] lg:text-[2.5vw]">
+                            <p>Total Supply</p>
+                            <p class="patua_one font-light">69,000,000,000,000 </p> 
+                        </div>
+
+                        <div class="flex items-center flex-wrap gap-[3vw] text-[5.5vw] lg:text-[1.4vw] mt-[2vw]">
+                            <div class="chart-info max-lg:w-full flex_center gap-[1vw]">
+                                <span class="bg-[#EFB970] border-[5px] lg:border-[.5vw] border-white rounded-full w-[20px] lg:w-[2.5vw] aspect-square"></span>
+                                <p>92% Community</p>
+                            </div>
+                            <div class="chart-info max-lg:w-full flex_center gap-[1vw]">
+                                <span class="bg-[#00E0FF] border-[5px] lg:border-[.5vw] border-white rounded-full w-[20px] lg:w-[2.5vw] aspect-square"></span>
+                                <p>8% CEX Listing</p>
+                            </div>
+                        </div>
+
+                      <div class="contract w-full py-[10px] lg:py-[1.3vw] px-[2vw] bg-[#39751B66] border-[.5vw] border-[#346F16] rounded-[.8vw] flex items-center justify-between mt-[3vw] ">
+                        <p class="patua_one  text-[2.3vw] lg:text-[1.4vw]">AtKjNndzNBJAo4Z7o23hTMcucBwJX94y94E2Aj82YWux</p>
+
+                        <button class="copy">
+                            <img src="./assets/image/copy-icon.svg" alt="copy icon" class="w-[20px] lg:w-[2vw] h-auto">
+                        </button>
+
+                      </div>
+
+                    </div>
+
+                </div>
+
+                <div class="links w-full flex_center flex-wrap mt-[10vw] lg:mt-[12vw] gap-5 lg:gap-[2vw]">
+                    <a href="#cmc" target="_blank" class="h-[30px] lg:h-[3vw] duration-150 hover:scale-95">
+                        <img src="./assets/image/coinmarketcap.svg" alt="cmc" class="h-full">
+                    </a>
+                    <a href="#pinksale" target="_blank" class="h-[30px] lg:h-[3vw] duration-150 hover:scale-95">
+                        <img src="./assets/image/pinksale.svg" alt="pinksale" class="h-full">
+                    </a>
+                    <a href="#coingecko" target="_blank" class="h-[34px] lg:h-[4vw] duration-150 hover:scale-95">
+                        <img src="./assets/image/coingecko.png" alt="coingecko" class="h-full">
+                    </a>
+                    <a href="#dexview" target="_blank" class="h-[30px] lg:h-[3vw] duration-150 hover:scale-95">
+                        <img src="./assets/image/dexview.png" alt="dexview" class="h-full">
+                    </a>
+                </div>
+
+                <!-- bg -->
+                 <div class="bg1 absolute w-[20%] left-[2%] bottom-[50%] lg:bottom-[20%] rotate-[-10deg]">
+                    <img src="./assets/image/bg-token1.png" alt="token1" class="w-full">
+                 </div>
+   
+                 <div class="bgw absolute w-[26%] lg:w-[20%] right-[-7%]  lg:bottom-[10%] rotate-[-20deg]">
+                    <img src="./assets/image/bg-token2.png" alt="token1" class="w-full">
+                 </div>
+
+         </section>
+
+         <!-- footer -->
+          <footer class="w-full h-auto relative bg-[#CAF847] pt-[4vw] flex_center flex-col gap-[4vw]">
+
+            <img src="./assets/image/footer.png" alt="footer" class="w-[80%]">
+
+            <div class="nav-socials w-full bg-[#4C9528] py-[2vw] px-[2vw] flex items-center justify-between flex-wrap border-t-white border-t-2">
+
+                    <div class="logo flex_center gap-2 md:gap-4">
+                        <span class="w-[40px] md:w-[60px] h-[40px] md:h-[60px] rounded-full border-black border-[2px] flex_center overflow-hidden">
+                            <img src="./assets/image/logo.png" alt="logo" class="w-[130px] h-auto object-cover">
+                        </span>
+                         <img src="./assets/image/pepeText.png" alt="logo" class="w-[70px] md:w-[100px] lg:w-[130px] h-auto object-cover">
+                    </div>  
+
+                    <ul class="flex items-center relative gap-[1rem]">
+                        
+                        <li class="list-none">
+                            <a href="#Home"
+                                class="text_nav text-[18px]">
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li class="list-none">
+                            <a href="#About"
+                                class="text_nav text-[18px]">
+                                About
+                            </a>
+                        </li>
+                        
+                        <li class="list-none">
+                            <a href="#Tokonomics"
+                                class="text_nav text-[18px]">
+                                Tokonomics
+                            </a>
+                        </li>
+ 
+
+                    </ul>
+
+                <div class="social flex_center gap-6">
+                <a href="#twitter" class="social_btn bg-[#FFFFFF] rounded-lg w-[40px] md:w-[56px] aspect-square border-black border-2 box_shdow flex_center duration-150 hover:scale-110">
+                    <img src="./assets/image/twitter.svg" alt="twitter" class="w-[50%]">
+                </a>
+                <a href="#telegram" class="social_btn bg-[#FFFFFF] rounded-lg w-[40px] md:w-[56px] aspect-square border-black border-2 box_shdow flex_center duration-150 hover:scale-110">
+                    <img src="./assets/image/telegram.svg" alt="telegram" class="w-[50%]">
+                </a>
+                <a href="#solana" class="social_btn bg-[#FFFFFF] rounded-lg w-[40px] md:w-[56px] aspect-square border-black border-2 box_shdow flex_center duration-150 hover:scale-110">
+                    <img src="./assets/image/solana.png" alt="solana" class="w-[50%]">
+                </a>
+            </div>
+            </div>
+
+          </footer>
+
+    </div>
+
+    <!-- aos js scroll animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+
+        // aos 
+        AOS.init({ 
+           once: true
+        });   
+
+        // menu navbar
+        const menu = document.querySelector('.menu');
+        const menuBtn = document.querySelector('.menu-button');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active')
+            menu.classList.toggle('hidden')
+        });
+
+        // copy address
+        const copyAddress = document.querySelector('.copy-box'); 
+        let text = document.querySelector('.copy-box__text');
+        let btn = document.querySelector('.copy-box__btn');
+        let btnText = btn.textContent;
+        let timeout;
+
+        copyAddress.addEventListener('click', () => { 
+            navigator.clipboard.writeText(text.textContent).then(function () {
+                btn.textContent = 'Copied';
+
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    btn.textContent = btnText;
+                }, 2000);
+            }).catch(function (err) {
+                console.error('Failed to copy text: ', err);
+            });
+            
+        })
+
 
  
-  </head>
-
-  <body class="main-page">
- 
-	<nav>
-		<div class="nav-content w-full lg:w-[75%] max-w-[1300px] flex justify-between items-center max-lg:px-6 flex-wrap max-md:gap-3  ">
-
-			<h3 class="text-[25px] max-lg:text-white">
-				
-				<span class="lg:hidden text-[30px]"> < </span>
-				<span class="hidden lg:block">Load details</span>
-
-			</h3>
-
-			<p class="lg:hidden center_position absolute text-white text-[18px]">Load#15B1664</p>
-
-			<div class="accessibility flex items-center gap-4  ">
-
-				<button id="shareBtn" class="share-btn flex gap-3 items-center justify-center ">
-					<img src="./assets/images/share.svg" alt="share" class="h-[30px] md:h-[24px] w-auto">
-					<p class="max-md:text-[14px] text-[16px] max-lg:hidden">Share</p>
-				</button>
-
-				<a href="./login.html" class="cursor-pointer max-lg:hidden">
-					<button class="login-btn-nav max-md:text-[14px] text-[16px] ">Log in to act on this load</button>
-				</a>
-
-			</div>
-
-		</div>
-	</nav>
-
-    <div class="container_site w-full lg:w-[77%] max-w-[1300px] h-auto flex flex-col items-center lg:py-10  ">
-
-		<div class="max-w-[100%] h-[350px] lg:h-[500px] w-full z-[88] relative">
-			<div class="w-full h-full relative z-10">
-				<div id="map" class="w-full h-full"></div>
-			</div>
-			<div class="bg-map absolute z-20 w-full h-[30px] bg-white"></div>
-			<div class="map-icon absolute z-20 w-[30px] h-[30px]    ">
-				<img src="./assets/images/map.svg" alt="" class="w-[60%] h-auto">
-			</div>
-		</div>
-
-		<div class="bar-container fixed flex justify-between items-center bg-white w-full h-[85px] lg:hidden z-[999] bottom-0 px-4">
-			<button class="bar-mobile-btn btn1"><img src="./assets/images/MaterialSymbolsCallOutlineRounded.svg" alt="call phone" class="w-[20px]"></button>
-			<button class="bar-mobile-btn btn2">Bid</button>
-			<button class="bar-mobile-btn btn2">Book</button>
-		</div>
-
-		<div class="content_container w-full h-auto relative lg:px-4">
-			
-			<div class="details-container w-full lg:w-[60%]">
-				
-				<div class="content-box details-mobile">
-					
-					<h4 class="title-content font-semibold">Details</h4>
-
-					<div class="container-data">
-						<div class="container-data-inner">
-							<div class="data id">
-								<p>Distance</p>
-								<p>305 mi</p>
-							</div> 
-							<div class="data price">
-								<p>Price</p>
-								<p>$1,550</p>
-							</div>
-							<div class="data number">
-								<p>Number of stops</p>
-								<p>2</p>
-							</div>
-						</div>
-					
-						<div class="container-data-inner">
-							<div class="data deadhead">
-								<p>Deadhead</p>
-								<p>N/A</p>
-							</div>
-							<div class="data rate">
-								<p>Rate per mile</p>
-								<p>$5.08 / mi</p>
-							</div>
-							<div class="data transfix">
-								<p>Transfix id</p>
-								<p>1581664</p>
-							</div>
-						</div>
-					</div>
-					
-				</div> 
-			 
-				<div class="content-box equipment">
-					
-					<h4 class="title-content">Equipment</h4>
-
-					<div class="data">
-						<p>Trailer</p>
-						<p>Dry Van</p>
-					</div>
-					<div class="data">
-						<p>Length</p>
-						<p>53 ft</p>
-					</div>
-					<div class="data">
-						<p>Requirements</p>
-						<p>-</p>
-					</div> 
-
-				</div>
-
-				<div class="content-box commodities">
-					
-					<h4 class="title-content">Commodities</h4>
-
-					<div class="data">
-						<p>Weight</p>
-						<p>35,000 lbs</p>
-					</div>
-					<div class="data">
-						<p>Commodity</p>
-						<p>-</p>
-					</div>
-					<div class="data">
-						<p>Packaging</p>
-						<p>-</p>
-					</div> 
-
-				</div>
-				
-				<div class="content-box commodities">
-					 
-					<div class="data">
-						<p class="text-black">Broker</p>
-						<a href="#" class="text-[12px] broker-link">
-							 <p>View all broker info</p>
-							<img src="./assets/images/out_Icon.svg" alt="out icon" class="h-[10px]">
-						</a>
-					</div>
-					<div class="data">
-						<p>Company</p>
-						 <img src="./assets/images/tradent.avif" alt="tradent" class="h-[25px] w-auto">
-					</div>
-					<div class="data">
-						<p>Factoring eligibility</p>
-						<h5 class="factoring text-[12px]">Not Factorable</h5>
-					</div>
-					<div class="data">
-						<p>Email</p>
-						<p class="text-black text-[20px] max-w-[70%] text-ellipsis overflow-hidden">loads+trucksmarter@tridenttransport.mail.parade.ai</p>
-					</div> 
-					<div class="data">
-						<p>Phone</p>
-						<p class="text-black text-[20px]">+1 (727) 300-4032</p>
-					</div>
-					<div class="data">
-						<p>MC</p>
-						<p class="text-black text-[20px]">848750</p>
-					</div>
-					<div class="data">
-						<p>DOT</p>
-						<p>-</p>
-					</div>
-					<div class="data">
-						<p>Days to Pay - Last 60</p>
-						<p>-</p>
-					</div>
-					<div class="data">
-						<p class="">Days to Pay - All time</p>
-						<a href="#" class="text-[14px] underline">
-							 <p>Open in directory</p>
-							<img src="./assets/images/out_Icon.svg" alt="out icon" class="h-[14px]">
-						</a>
-					</div>
-					<div class="data">
-						<p class="">Payment method</p>
-						<a href="#" class="text-[14px] underline">
-							 <p>Open in directory</p>
-							<img src="./assets/images/out_Icon.svg" alt="out icon" class="h-[14px]">
-						</a>
-					</div>
-					<div class="data">
-						<p class="">Website</p>
-						<a href="#" class="text-[18px] underline font-semibold">
-							 <p>tridenttransport.com/</p> 
-						</a>
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class="price-container w-full lg:w-[38%]">
-
-				<div class="content-box hidden-box-in-mobile">
-					
-					<div class="price w-full flex justify-between">
-						<p>Price</p>
-						<p>Broker</p>
-					</div>
-
-					<div class="data">
-						<p class="text-black text-[27px]">$ -</p>
-						 
-						 <div class="image h-[40px] w-auto">
-							<img src="./assets/images/tradent.avif" alt="" class="h-full">
-						 </div>
-					</div>
-
-					<div class="line"></div>
-
-					<div class="data">
-						<p class="text-[14px]">Phone number</p>
-						<p>+1 (727) 300-4032</p>
-					</div>
-
-					<button class="login-btn">
-						Log in to act on this load
-					</button>
-					
-				</div>
-
-				<div class="content-box mobile-box text-[13px]  ">
-					<h4 class="text-black text-[20px]">$1,550</h4> 
-					<p>$5.08 / mi</p>
-					<p class="text-[13px]">
-						<span>⏱︎  Posted</span> 
-						<span class="text-black">12 hrs ago</span>
-					</p>
-				</div>
-
-				<div class="content-box path-map bg-black">
-					<h4 class="title-content hidden-box-in-mobile">Stops</h4>
-
-					<div class="path-container flex w-full gap-2">
-						
-						<div class="path">
-							<div class="start-point rounded-full"></div>
-							<div class="line-path"></div>
-							<div class="end-point"></div>
-						</div>
-
-					    <div class="path-information flex flex-col gap-2 lg:gap-4">
-
-							<div class="about-path w-full">
-								<div class="point">
-									<div class="title ">
-										<h4 class="from" id="startCity">Pearland, TX</h4>
-										<p class="text-[10px] text-gray-400  ">19 mi deadhead</p>
-									</div>
-									<div class="address" >
-										<p>Address</p>
-										<h5 id="startAddress">Pearland, TX 77581</h5>
-									</div>
-									<div class="time" >
-										<p class="text-[10px]">Oct 23, 09:30 PDT ★ 4.2</p> 
-									</div>
-									<div class="live">
-										<p>Live pickup</p>
-										<h5>Feb 26 · 14:15 CST</h5>
-									</div>
-									<div class="notes  ">
-										<p>Notes</p>
-										<h5>Verify to view details</h5>
-									</div>
-								</div>
-							</div>
-	
-							<div class="about-path">
-								<div class="point">
-									<div class="title ">
-										<h4 class="to" id="endCity">
-											Edmonton, AB</h4>
-											<p class="text-[10px] text-gray-400  ">676 mi loaded</p>
-									</div>
-									
-									<div class="address">
-										<p>Address</p>
-										<h5 id="endAddress">Edmonton, AB T6A 0L2</h5>
-									</div>
-									<div class="time" >
-										<p class="text-[10px]">Oct 24, 17:00 MDT</p> 
-									</div>
-									<div class="live">
-										<p>Live pickup</p>
-										<h5>Mar 3 · 08:00 MST - 12:00 MST</h5>
-									</div>
-									<div class="notes ">
-										<p>Notes</p>
-										<h5>Verify to view details</h5>
-									</div>
-								</div>
-							</div>
-
-							<div class="line"></div>
-							
-							<p class="text-[10px] flex gap-2"><span class="text-black flex"><img src="./assets/images/van.svg" alt="" class="h-[10px] w-auto mr-1"> Dry van</span> 43.1k lbs • 1 reload</p>
-							
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- Leaflet Routing Machine JS -->
-    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
- 
-	
-    <script src="./assets/js/index.js"></script>
- 
-  </body>
+    
+    
+    </script>
+</body>
 
 </html>
